@@ -22,6 +22,7 @@ def main():
 
     print(f"--- Begin report of {f.name} ---")
     create_book_report(char_dict=char_count)
+    print("--- End report ---")
 
 
 main()
