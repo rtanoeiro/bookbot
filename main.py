@@ -10,14 +10,18 @@ def count_characters(text: str) -> dict[str, int]:
     return character_dictionary
 
 
+def create_book_report(char_dict: dict[str, int]) -> None:
+    for char, value in char_dict.items():
+        print(f"The '{char}' character was found {value} times")
+
+
 def main():
     with open("books/frankenstein.txt") as f:
         text = (f.read()).lower()
-        num_words = len(text.split())
         char_count = count_characters(text)
 
-    print(f"The number of words in the book is: {num_words}")
-    print(f"The character dictionary for the text is: {char_count}")
+    print(f"--- Begin report of {f.name} ---")
+    create_book_report(char_dict=char_count)
 
 
 main()
